@@ -12,7 +12,7 @@ pipeline {
         stage('Build') {
             steps {
                 dir('starter') {
-                    sh 'mvn -B clean package'
+                    sh 'echo JAVA_HOME=$JAVA_HOME && which java && java -version && mvn -B clean package'
                 }
             }
         }
